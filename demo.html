@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+    .error {
+        color:red;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form...</h1>
+        <form action="hello" method="POST">
+            <div class="form-group">
+                <label for="usrId">Username:</label>
+                <input type="text" class="form-control" onchange="validateTb()" id="usrId"name="userName">
+                <span class="error" id="txtBoxErr"></span>
+            </div>
+            <div class="form-group">
+                    <label for="pwdId">password:</label>
+                    <input type="password" class="form-control" id="pwdId" name="password">
+                    <span class="error" id="pwdErrMsg"></span>
+            </div>
+            <div class="form-group">
+                <label for="courseId">Select Course:</label>
+                <select class="form-control" id="courseId">
+                    <option value="">--Please Select--</option>
+                    <option value="JS">JavaScript</option>
+                    <option value="JAVA">Java</option>
+                    <option value="NJS">NodeJs</option>
+                </select>
+                <span class="error" id="crsErrMsg"></span>
+            </div>
+            Select Vehicle:
+            <div class="form-check">
+                   <input type="checkbox"  class="form-check-input" id="TwowId" name="vehicle" value="2W">
+                   <label for="pwdId" class="form-check-label">2W</label>
+            </div>
+            <div class="form-check">
+                   <input type="checkbox" class="form-check-input" id="FourwId" name="vehicle" value="4W">
+                   <label for="FourwId" class="form-check-label">4W</label>
+            </div> 
+            <div class="form-check">
+                   <input type="checkbox" class="form-check-input" id="ThreeWId" name="vehicle" value="3W">
+                   <label for="ThreeWId" class="form-check-label">3W</label>
+            </div>
+            <div>
+                    <span class="error" id="vehicleErrMsg"></span>
+            </div>
+            Select Gender:
+            <div class="form-check">
+                    <input type="radio"  class="form-check-input" id="mId" name="gender" value="M">
+                    <label for="mId" class="form-check-label">M</label>
+             </div>
+             <div class="form-check">
+                    <input type="radio" class="form-check-input" id="fId" name="gender" value="F">
+                    <label for="fId" class="form-check-label">F</label>
+             </div> 
+             <div class="form-check">
+                    <input type="radio" class="form-check-input" id="tId" name="gender" value="T">
+                    <label for="tId" class="form-check-label">T</label>
+             </div>
+             <div>
+                    <span class="error" id="genderErrMsg"></span>
+            </div>
+             <div class="form-group">
+                    <label for="addr">Address:</label>
+                   <textarea name="address" id="addr" class="form-control"></textarea>
+                   <span class="error" id="addrErr"></span>
+                </div>
+
+            <button type="button" class="btn btn-primary" onclick="displayText()">Sign In</button>
+        </form>
+        <h1>Registration Details</h1>
+        <div id="output">
+            <table class="table table-dark" id="rgsTbl">
+                <thead>
+                    <tr>
+                        <th>UserName</th>
+                        <th>Vehicle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    <script src="main.js"></script>
+</body>
+</html>
